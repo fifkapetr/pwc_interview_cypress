@@ -12,10 +12,11 @@ const jsonToExcel = async () => {
 
   // Add columns
   worksheet.columns = [
-    { header: "Title", key: "title", width: 30 },
-    { header: "Locality", key: "locality", width: 30 },
-    { header: "Norm Price", key: "normPrice", width: 15 },
+    { header: "Název", key: "title", width: 30 },
+    { header: "Lokalita", key: "locality", width: 30 },
+    { header: "Cena", key: "normPrice", width: 15 },
     { header: "URL", key: "url", width: 30 },
+    { header: "ID inzerátu", key: "advId", width: 15 },
   ];
 
   // Add rows
