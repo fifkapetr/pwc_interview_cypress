@@ -8,9 +8,13 @@ describe("Web Scraping", () => {
     // Replace with the URL you want to scrape
     cy.visit("https://www.sreality.cz/hledani/prodej/byty?region=Most");
     cy.get(".text-wrap").should("be.visible");
-
+    cy.get(".per-page .sort").click();
+    cy.xpath(
+      '//span[contains(@class, "per-page-select right-arrow opened")]//button[contains(text(), "60")]'
+    ).click();
+    cy.get(".text-wrap").should("be.visible");
     const scrapedData = [];
-
+    cy.wait(5000);
     // Scrape data
     cy.get(".text-wrap")
       .each(($wrap) => {
