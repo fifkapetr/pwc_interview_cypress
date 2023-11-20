@@ -1,5 +1,6 @@
 import moment from "moment";
 
+// test ted pada casto na vypisu. Mozna to opravi pridani cy.wait mezi jednotlive kroky
 describe("SReality Cypress Interview task", () => {
   it("Sreality flat database", () => {
     const date = moment().format("DD.MM.YYYY");
